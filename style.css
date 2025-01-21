@@ -28,6 +28,18 @@
   margin: 30px 0;
   text-align: center;
 }
+.btn {
+  padding: 15px 20px;
+}
+.bg-one {
+  background-color: #95b226;
+}
+.bg-two {
+  background-color: #5d58ef;
+}
+.bg-three {
+  background-color: steelblue;
+}
 /* shared styles ends */
 
 .navbar {
@@ -245,7 +257,118 @@ h4 {
 
 /* button container ends */
 /* curriculum ends */
+/* stories section starts */
+.stories-container {
+  background-image: url(./assets/bg.png),
+    linear-gradient(0deg, rgba(254, 163, 1, 0.3), rgba(255, 255, 255, 0.3) 100%);
+  background-position: top bottom;
+  background-size: contain;
+  margin-bottom: 40px;
+  padding: 30px 0px;
+}
+.stories-card-container {
+  display: flex;
+  margin: 30px 0;
+  gap: 15px;
+}
 
+.first-card-container {
+  flex: 1;
+  display: flex;
+  /* flex-direction: column;
+  justify-content: space-between; */
+  height: 600px; /* Height set to match the combined height of four cards in the second container */
+}
+
+.second-card-container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  gap: 10px;
+  height: 600px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  height: 300px; /* Each card's height is set to 1/4th of the first-card-container */
+}
+.card-container-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  height: 100%;
+}
+
+.story-image-container {
+  position: relative;
+  height: 60%; /* Allocate 60% of the card height for the image */
+}
+
+.image {
+  width: 100%;
+  height: 100%; /* Image will fill the allocated height */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.story-img-text {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+}
+
+.img-title {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-weight: bold;
+}
+.img-title-1 {
+  font-size: 1.2rem;
+  margin: 50px 0;
+  font-weight: bold;
+}
+
+.img-des {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.story-image-button-1 {
+  position: absolute;
+  bottom: -0.7rem;
+  right: 40%;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, transform 0.2s;
+}
+.story-image-button {
+  position: absolute;
+  bottom: -0.7rem;
+  left: 25%;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* stories sectionends */
 /* Responsive Design */
 @media (max-width: 500px) {
   /* navbar starts */
@@ -327,4 +450,39 @@ h4 {
     display: none;
   }
   /* curriculum ends */
+  /* stories section starts here */
+  .first-card-container {
+    display: none;
+  }
+
+  .second-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    height: auto;
+  }
+
+  .card-container {
+    height: auto;
+    padding: 15px;
+  }
+
+  .story-img-text {
+    height: auto;
+  }
+
+  .img-title {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+
+  .img-des {
+    font-size: 0.85rem;
+  }
+
+  .story-image-button {
+    left: 50%;
+    padding: 3px 10px;
+    transform: translateX(-50%);
+  }
+  /* stories section ends */
 }
